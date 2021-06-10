@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="GameViewController" customModule="Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yCB-rq-rGf" customClass="GameView" customModule="Game" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Qgg-9Y-jzU" appends="YES" id="Ufe-WE-JL8"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="yCB-rq-rGf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9NK-zt-BBs"/>
+                            <constraint firstItem="yCB-rq-rGf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="Sci-OL-XhW"/>
+                            <constraint firstItem="yCB-rq-rGf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iJu-BG-D12"/>
+                            <constraint firstItem="yCB-rq-rGf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ueb-So-ML9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="BPJ-CJ-M1E" appends="YES" id="cDc-11-wLp"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="gameView" destination="yCB-rq-rGf" id="Y0w-d6-XFI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="BPJ-CJ-M1E">
+                    <connections>
+                        <action selector="grabSplash:" destination="BYZ-38-t0r" id="JUs-Ih-TkT"/>
+                    </connections>
+                </panGestureRecognizer>
+                <tapGestureRecognizer id="Qgg-9Y-jzU">
+                    <connections>
+                        <action selector="drop:" destination="BYZ-38-t0r" id="uzH-l9-sKP"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
+        </scene>
+    </scenes>
+</document>
